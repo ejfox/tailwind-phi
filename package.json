@@ -1,13 +1,17 @@
 {
   "name": "tailwind-phi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Golden ratio utilities for Tailwind CSS",
   "main": "index.js",
   "scripts": {
     "dev": "cd demo && yarn dev",
     "build": "cd demo && yarn build"
   },
-  "keywords": ["tailwindcss", "plugin", "golden-ratio"],
+  "keywords": [
+    "tailwindcss",
+    "plugin",
+    "golden-ratio"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
