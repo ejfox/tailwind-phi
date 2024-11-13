@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tailwind-phi | Golden Ratio Design System</title>
+    <link href="output.css" rel="stylesheet">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+    <!-- Clean header with golden proportions -->
+    <header class="border-b border-slate-200 bg-white">
+        <div class="max-w-5xl mx-auto px-6 py-8">
+            <h1 class="text-phi-xl font-light mb-2">
+                tailwind-<span class="font-semibold">phi</span>
+            </h1>
+            <p class="text-slate-600">A golden ratio (φ ≈ 1.618034) design system for Tailwind CSS</p>
+        </div>
+    </header>
+
+    <!-- Add this after the header and before the main content -->
+    <section class="bg-gradient-to-br from-amber-50 to-amber-100 border-b border-amber-200">
+        <div class="max-w-5xl mx-auto px-6 py-12">
+            <!-- Golden Ratio Visualization -->
+            <div class="grid grid-cols-phi-fixed gap-8 items-start mb-12">
+                <!-- Visual Demonstration -->
+                <div class="space-y-6">
+                    <div class="relative aspect-phi bg-white rounded-lg shadow-sm overflow-hidden group">
+                        <!-- Golden Rectangle -->
+                        <div class="absolute inset-0 border-2 border-amber-300 rounded-lg"></div>
+                        <!-- Golden Spiral Overlay (appears on hover) -->
+                        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-phi">
+                            <div
+                                class="absolute right-0 top-0 w-phi h-phi border-l-2 border-b-2 border-amber-500 rounded-bl-[100%]">
+                                <div
+                                    class="absolute right-0 bottom-0 w-phi-sm h-phi-sm border-l-2 border-t-2 border-amber-500 rounded-tl-[100%]">
+                                    <div
+                                        class="absolute right-0 top-0 w-phi-xs h-phi-xs border-r-2 border-t-2 border-amber-500 rounded-tr-[100%]">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Labels -->
+                        <div
+                            class="absolute inset-x-0 top-1/2 flex justify-between px-4 text-amber-600 font-mono text-sm">
+                            <span>1</span>
+                            <span>φ (1.618034)</span>
+                        </div>
+                    </div>
+                    <!-- Nested Golden Ratios -->
+                    <div class="flex gap-4">
+                        <div class="flex-1 bg-white p-4 rounded-lg shadow-sm text-center">
+                            <div class="font-mono text-amber-600">61.8%</div>
+                            <div class="text-sm text-slate-600">Major Segment</div>
+                        </div>
+                        <div class="w-phi-sm bg-white p-4 rounded-lg shadow-sm text-center">
+                            <div class="font-mono text-amber-600">38.2%</div>
+                            <div class="text-sm text-slate-600">Minor Segment</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mathematical Explanation -->
+                <div class="bg-white p-phi rounded-lg shadow-sm space-y-phi-xs">
+                    <h2 class="text-phi-lg font-light text-amber-600">The Divine Proportion</h2>
+                    <p class="text-slate-600">The golden ratio (φ) occurs when the ratio of two quantities is the same
+                        as the ratio of their sum to the larger quantity.</p>
+                    <div class="font-mono text-sm space-y-2 bg-amber-50 p-4 rounded-lg">
+                        <p>φ = 1.618034</p>
+                        <p>a/b = (a+b)/a = φ</p>
+                        <p>1/φ = 0.618034 (61.8%)</p>
+                        <p>1/φ² = 0.381966 (38.2%)</p>
+                        <p>1/φ³ = 0.236068 (23.6%)</p>
+                    </div>
+                    <p class="text-sm text-slate-500">Found throughout nature, art, and architecture, the golden ratio
+                        creates compositions that are aesthetically pleasing and naturally balanced.</p>
+                </div>
+            </div>
+
+            <!-- Quick Reference Grid -->
+            <div class="grid grid-cols-phi-thirds gap-4">
+                <div
+                    class="bg-white p-4 rounded-lg shadow-sm text-center group hover:bg-amber-500 transition-colors duration-phi">
+                    <div class="text-phi font-mono text-amber-600 group-hover:text-white">1.618</div>
+                    <div class="text-sm text-slate-600 group-hover:text-white/90">Golden Ratio (φ)</div>
+                </div>
+                <div
+                    class="bg-white p-4 rounded-lg shadow-sm text-center group hover:bg-amber-500 transition-colors duration-phi">
+                    <div class="text-phi font-mono text-amber-600 group-hover:text-white">137.5°</div>
+                    <div class="text-sm text-slate-600 group-hover:text-white/90">Golden Angle</div>
+                </div>
+                <div
+                    class="bg-white p-4 rounded-lg shadow-sm text-center group hover:bg-amber-500 transition-colors duration-phi">
+                    <div class="text-phi font-mono text-amber-600 group-hover:text-white">0.618</div>
+                    <div class="text-sm text-slate-600 group-hover:text-white/90">Reciprocal (1/φ)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-5xl mx-auto px-6 py-8">
+        <!-- Core Layouts Section -->
+        <section class="mb-12">
+            <h2 class="text-phi-lg font-light mb-6">Core Layout Patterns</h2>
+
+            <!-- Blog Layout -->
+            <div class="mb-8">
+                <h3 class="text-phi mb-3 text-slate-700">Classic Blog Layout</h3>
+                <div class="grid grid-cols-phi-fixed gap-4">
+                    <article class="bg-white p-6 rounded-lg shadow-sm">
+                        <h4 class="text-phi-sm font-medium mb-2">Main Content (61.8034%)</h4>
+                        <p class="text-slate-600">The golden ratio divides space naturally, with the main content taking
+                            the larger segment.</p>
+                    </article>
+                    <aside class="bg-white p-6 rounded-lg shadow-sm">
+                        <h4 class="text-phi-sm font-medium mb-2">Sidebar (38.1966%)</h4>
+                        <p class="text-slate-600">The complementary segment creates perfect balance.</p>
+                    </aside>
+                </div>
+                <div class="mt-2 text-sm text-slate-500 font-mono">grid grid-cols-phi-fixed</div>
+            </div>
+
+            <!-- Golden Thirds Grid -->
+            <section class="mb-12">
+                <h2 class="text-phi-lg font-light mb-6">Golden Thirds Grid</h2>
+                <p class="text-slate-600 mb-6">The golden thirds grid (38.2% : 23.6% : 38.2%) creates naturally balanced
+                    layouts based on nested golden ratios. The center column is derived from applying the golden ratio
+                    to the side columns.</p>
+
+                <!-- Basic Example -->
+                <div class="mb-8">
+                    <h3 class="text-phi mb-3 text-slate-700">Basic Proportions</h3>
+                    <div class="grid grid-cols-phi-thirds gap-4">
+                        <div class="bg-gradient-to-br from-amber-50 to-amber-100 p-6 rounded-lg shadow-sm">
+                            <span class="font-mono text-amber-900 block mb-2">38.2%</span>
+                            <span class="text-sm text-amber-800">Primary column</span>
+                        </div>
+                        <div class="bg-gradient-to-br from-amber-100 to-amber-200 p-6 rounded-lg shadow-sm">
+                            <span class="font-mono text-amber-900 block mb-2">23.6%</span>
+                            <span class="text-sm text-amber-800">φ² of total width</span>
+                        </div>
+                        <div class="bg-gradient-to-br from-amber-50 to-amber-100 p-6 rounded-lg shadow-sm">
+                            <span class="font-mono text-amber-900 block mb-2">38.2%</span>
+                            <span class="text-sm text-amber-800">Primary column</span>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-sm text-slate-500 font-mono">grid grid-cols-phi-thirds</div>
+                </div>
+
+
+                <!-- Content-Sidebar-Space Layout -->
+                <div class="mb-8">
+                    <h3 class="text-phi mb-3 text-slate-700">Harmonious Whitespace</h3>
+                    <div class="space-y-phi-sm">
+                        <!-- Basic Breathing Room -->
+                        <div class="grid grid-cols-phi-thirds gap-phi-sm">
+                            <div class="bg-white p-phi rounded-lg shadow-sm">
+                                <h4 class="text-phi-sm font-medium mb-phi-xs text-slate-700">Primary Content</h4>
+                                <p class="text-slate-600">The golden ratio creates natural visual rhythm, even in empty
+                                    space.
+                                    Notice how the center gap feels perfectly balanced.</p>
+                            </div>
+                            <!-- Visualized breathing room -->
+                            <div class="flex items-center justify-center">
+                                <div class="relative w-full aspect-square">
+                                    <!-- Golden spiral visualization -->
+                                    <div class="absolute inset-0 opacity-20">
+                                        <div
+                                            class="absolute right-0 top-0 w-phi h-phi border-l border-b border-amber-400 rounded-bl-[100%]">
+                                            <div
+                                                class="absolute right-0 bottom-0 w-phi-sm h-phi-sm border-l border-t border-amber-400 rounded-tl-[100%]">
+                                                <div
+                                                    class="absolute right-0 top-0 w-phi-xs h-phi-xs border-r border-t border-amber-400 rounded-tr-[100%]">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Center arrow -->
+                                    <div class="absolute inset-0 flex items-center justify-center text-amber-500">
+                                        <svg class="w-8 h-8 rotate-180" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                                d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-white p-phi rounded-lg shadow-sm">
+                                <h4 class="text-phi-sm font-medium mb-phi-xs text-slate-700">Secondary Content</h4>
+                                <p class="text-slate-600">The space between elements is as important as the elements
+                                    themselves.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Mathematical Explanation -->
+                <div class="bg-slate-800 text-slate-200 p-6 rounded-lg">
+                    <h3 class="text-phi mb-4 font-light">The Math Behind Golden Thirds</h3>
+                    <div class="grid grid-cols-phi-fixed gap-6">
+                        <div class="space-y-3">
+                            <p>The golden thirds grid is derived from nested applications of the golden ratio:</p>
+                            <ol class="space-y-2 text-sm text-slate-300">
+                                <li>1. First split: 61.8% and 38.2% (1/φ and 1/φ²)</li>
+                                <li>2. Second split: The 61.8% segment is divided again by φ</li>
+                                <li>3. Result: 38.2% : 23.6% : 38.2%</li>
+                            </ol>
+                        </div>
+                        <div class="font-mono text-sm space-y-2">
+                            <p>38.2% = 1/φ²</p>
+                            <p>23.6% = 1/φ³</p>
+                            <p>Sum = 100%</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Typography Section -->
+        <section class="mb-12">
+            <h2 class="text-phi-lg font-light mb-6">Typography Scale</h2>
+
+            <!-- Visual Scale with Annotations -->
+            <div class="grid grid-cols-phi-fixed gap-8">
+                <!-- Left: Type Scale Demo -->
+                <div class="bg-white p-phi rounded-lg shadow-sm">
+                    <div class="space-y-phi-sm">
+                        <!-- Each text size with annotation -->
+                        <div
+                            class="border-l-4 border-amber-500/20 pl-4 py-2 hover:border-amber-500 transition-colors duration-phi">
+                            <p class="text-phi-3xl font-light">The Quick Brown Fox</p>
+                            <div class="text-sm text-slate-500 font-mono mt-2">text-phi-3xl (φ⁴ ≈ 6.854rem)</div>
+                        </div>
+
+                        <div
+                            class="border-l-4 border-amber-500/20 pl-4 py-2 hover:border-amber-500 transition-colors duration-phi">
+                            <p class="text-phi-2xl font-light">The Quick Brown Fox</p>
+                            <div class="text-sm text-slate-500 font-mono mt-2">text-phi-2xl (φ³ ≈ 4.236rem)</div>
+                        </div>
+
+                        <div
+                            class="border-l-4 border-amber-500/20 pl-4 py-2 hover:border-amber-500 transition-colors duration-phi">
+                            <p class="text-phi-xl">The Quick Brown Fox</p>
+                            <div class="text-sm text-slate-500 font-mono mt-2">text-phi-xl (φ² ≈ 2.618rem)</div>
+                        </div>
+
+                        <div
+                            class="border-l-4 border-amber-500/20 pl-4 py-2 hover:border-amber-500 transition-colors duration-phi">
+                            <p class="text-phi-lg">The Quick Brown Fox</p>
+                            <div class="text-sm text-slate-500 font-mono mt-2">text-phi-lg (φ ≈ 1.618rem)</div>
+                        </div>
+
+                        <div
+                            class="border-l-4 border-amber-500/20 pl-4 py-2 hover:border-amber-500 transition-colors duration-phi">
+                            <p class="text-phi">The Quick Brown Fox</p>
+                            <div class="text-sm text-slate-500 font-mono mt-2">text-phi (1rem = 16px)</div>
+                        </div>
+
+                        <div
+                            class="border-l-4 border-amber-500/20 pl-4 py-2 hover:border-amber-500 transition-colors duration-phi">
+                            <p class="text-phi-sm">The Quick Brown Fox</p>
+                            <div class="text-sm text-slate-500 font-mono mt-2">text-phi-sm (1/φ ≈ 0.618rem)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Mathematical Explanation -->
+                <div class="space-y-4">
+                    <!-- Formula Card -->
+                    <div class="bg-slate-800 p-phi rounded-lg text-white">
+                        <h3 class="text-phi-sm font-medium text-amber-400 mb-4">The Mathematics</h3>
+                        <div class="font-mono text-sm space-y-2 text-slate-300">
+                            <p>Base = 16px</p>
+                            <p>φ⁴ = 6.854rem</p>
+                            <p>φ³ = 4.236rem</p>
+                            <p>φ² = 2.618rem</p>
+                            <p>φ¹ = 1.618rem</p>
+                            <p>φ⁰ = 1.000rem</p>
+                            <p>φ⁻¹ = 0.618rem</p>
+                        </div>
+                    </div>
+
+                    <!-- Usage Example -->
+                    <div class="bg-white p-phi rounded-lg shadow-sm">
+                        <h3 class="text-phi-sm font-medium text-slate-800 mb-4">Usage</h3>
+                        <div class="font-mono text-sm space-y-2 bg-slate-50 p-4 rounded text-slate-600">
+                            <p>&lt;h1 class="<span class="text-amber-600">text-phi-2xl</span>"&gt;</p>
+                            <p>&lt;h2 class="<span class="text-amber-600">text-phi-xl</span>"&gt;</p>
+                            <p>&lt;p class="<span class="text-amber-600">text-phi</span>"&gt;</p>
+                        </div>
+                    </div>
+
+                    <!-- Tips -->
+                    <div class="bg-gradient-to-br from-amber-50 to-amber-100 p-phi rounded-lg">
+                        <h3 class="text-phi-sm font-medium text-amber-800 mb-4">Pro Tips</h3>
+                        <ul class="space-y-2 text-sm text-amber-900">
+                            <li>• Use font-light for larger sizes</li>
+                            <li>• Pair with leading-phi utilities</li>
+                            <li>• Works with responsive prefixes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aspect Ratios -->
+        <section class="mb-12">
+            <h2 class="text-phi-lg font-light mb-6">Golden Rectangle</h2>
+            <div class="grid grid-cols-2 gap-6">
+                <!-- Standard Golden Rectangle -->
+                <div class="bg-white p-4 rounded-lg shadow-sm">
+                    <div class="aspect-phi bg-gradient-to-br from-blue-50 to-blue-100 rounded overflow-hidden">
+                        <div class="h-full flex items-center justify-center font-mono text-blue-800">
+                            1 : 1.618034
+                        </div>
+                    </div>
+                    <div class="mt-2 text-sm text-slate-500 font-mono">aspect-phi</div>
+                </div>
+                <!-- Reverse Golden Rectangle -->
+                <div class="bg-white p-4 rounded-lg shadow-sm">
+                    <div class="aspect-phi-reverse bg-gradient-to-br from-blue-50 to-blue-100 rounded overflow-hidden">
+                        <div class="h-full flex items-center justify-center font-mono text-blue-800">
+                            1.618034 : 1
+                        </div>
+                    </div>
+                    <div class="mt-2 text-sm text-slate-500 font-mono">aspect-phi-reverse</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Practical Examples -->
+        <section>
+            <h2 class="text-phi-lg font-light mb-6">Example Components</h2>
+
+            <!-- Card Grid -->
+            <div class="grid grid-cols-3 gap-4 mb-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-phi-sm font-medium mb-2">Card Title</h3>
+                    <p class="text-slate-600 text-sm">Using phi-based padding and typography.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-phi-sm font-medium mb-2">Card Title</h3>
+                    <p class="text-slate-600 text-sm">Natural proportions create visual harmony.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-phi-sm font-medium mb-2">Card Title</h3>
+                    <p class="text-slate-600 text-sm">Perfect for content-driven layouts.</p>
+                </div>
+            </div>
+
+            <!-- Feature Section -->
+            <div class="grid-cols-phi-fixed gap-6">
+                <div class="bg-slate-800 text-white p-6 rounded-lg">
+                    <h3 class="text-phi font-light mb-3">Featured Content</h3>
+                    <p class="text-slate-300">The golden ratio (φ) appears throughout nature, from spiral galaxies to
+                        sunflower seeds. Now you can bring these divine proportions to your web layouts.</p>
+                </div>
+                <div class="bg-gradient-to-br from-amber-500 to-amber-600 p-6 rounded-lg text-white">
+                    <h3 class="text-phi-sm font-medium mb-2">Quick Math</h3>
+                    <div class="font-mono space-y-1 text-sm">
+                        <p>φ = 1.618034</p>
+                        <p>1/φ = 0.618034</p>
+                        <p>1/φ² = 0.381966</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Add this after your existing grid examples -->
+        <section class="mb-12">
+            <h2 class="text-phi-lg font-light mb-6">Asymmetric φ Layouts</h2>
+            <p class="text-slate-600 mb-6">Using the smallest golden ratio division (23.6%) for subtle asymmetry</p>
+
+            <!-- Small Column First -->
+            <div class="mb-8">
+                <h3 class="text-phi mb-3 text-slate-700">Navigation with Content</h3>
+                <div class="grid-cols-phi-small-start gap-4">
+                    <nav class="bg-white p-6 rounded-lg shadow-sm">
+                        <h4 class="text-phi-sm font-medium mb-3">Quick Nav</h4>
+                        <ul class="space-y-2 text-sm text-slate-600">
+                            <li>Home</li>
+                            <li>About</li>
+                            <li>Contact</li>
+                        </ul>
+                    </nav>
+                    <main class="bg-white p-6 rounded-lg shadow-sm">
+                        <h4 class="text-phi-sm font-medium mb-3">Main Content (76.4%)</h4>
+                        <p class="text-slate-600">The larger section provides ample space for content while the narrow
+                            sidebar creates a subtle asymmetric balance.</p>
+                    </main>
+                </div>
+                <div class="mt-2 text-sm text-slate-500 font-mono">grid-cols-phi-small-start</div>
+            </div>
+
+            <!-- Small Column Last -->
+            <div class="mb-8">
+                <h3 class="text-phi mb-3 text-slate-700">Content with Meta</h3>
+                <div class="grid-cols-phi-small-end gap-4">
+                    <article class="bg-white p-6 rounded-lg shadow-sm">
+                        <h4 class="text-phi-sm font-medium mb-3">Article Content</h4>
+                        <p class="text-slate-600">The main content takes up the majority of the space (76.4%), while the
+                            meta information sits in a harmonious smaller column.</p>
+                    </article>
+                    <aside class="bg-white p-6 rounded-lg shadow-sm">
+                        <h4 class="text-phi-sm font-medium mb-3">Meta</h4>
+                        <div class="space-y-2 text-sm text-slate-600">
+                            <p>Published: Today</p>
+                            <p>Reading time: 5 min</p>
+                            <p>Category: Design</p>
+                        </div>
+                    </aside>
+                </div>
+                <div class="mt-2 text-sm text-slate-500 font-mono">grid-cols-phi-small-end</div>
+            </div>
+
+            <!-- Practical Application -->
+            <div class="mb-8">
+                <h3 class="text-phi mb-3 text-slate-700">Product Layout</h3>
+                <div class="grid-cols-phi-small-start gap-4">
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <div class="aspect-phi bg-amber-50 flex items-center justify-center">
+                            <svg class="w-8 h-8 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div class="p-4">
+                            <p class="text-sm text-slate-500">Product Gallery</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h4 class="text-phi font-medium mb-3">Product Details</h4>
+                        <p class="text-slate-600 mb-4">The narrow left column works perfectly for product thumbnails or
+                            navigation, while the main content area provides space for detailed information.</p>
+                        <div class="grid grid-cols-3 gap-2">
+                            <div class="bg-slate-50 p-3 rounded text-center">
+                                <div class="text-amber-500 font-medium">Size</div>
+                                <div class="text-sm text-slate-600">Large</div>
+                            </div>
+                            <div class="bg-slate-50 p-3 rounded text-center">
+                                <div class="text-amber-500 font-medium">Color</div>
+                                <div class="text-sm text-slate-600">Blue</div>
+                            </div>
+                            <div class="bg-slate-50 p-3 rounded text-center">
+                                <div class="text-amber-500 font-medium">Stock</div>
+                                <div class="text-sm text-slate-600">In Stock</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Add this new section before the footer -->
+        <section class="mb-12">
+            <h2 class="text-phi-lg font-light mb-6">Flex-based Golden Layouts</h2>
+            <p class="text-slate-600 mb-6">Using flex and width utilities to create golden ratio compositions</p>
+
+            <!-- Basic Flex Example -->
+            <div class="mb-8">
+                <h3 class="text-phi mb-3 text-slate-700">Simple Flex Split</h3>
+                <div class="flex gap-4">
+                    <div class="w-phi bg-white p-6 rounded-lg shadow-sm">
+                        <h4 class="text-phi-sm font-medium mb-3">Major Section</h4>
+                        <p class="text-slate-600">Takes up 61.8% of the space using w-phi</p>
+                    </div>
+                    <div class="w-phi-sm bg-white p-6 rounded-lg shadow-sm">
+                        <h4 class="text-phi-sm font-medium mb-3">Minor Section</h4>
+                        <p class="text-slate-600">38.2% width using w-phi-sm</p>
+                    </div>
+                </div>
+                <div class="mt-2 text-sm text-slate-500 font-mono">flex gap-4 + w-phi + w-phi-sm</div>
+            </div>
+
+            <!-- Nested Flex Layout -->
+            <div class="mb-8">
+                <h3 class="text-phi mb-3 text-slate-700">Nested Golden Ratios</h3>
+                <div class="flex gap-4">
+                    <div class="w-phi-sm bg-white p-6 rounded-lg shadow-sm">
+                        <div
+                            class="aspect-phi bg-amber-50 rounded mb-4 flex items-center justify-center text-amber-600">
+                            Sidebar Image
+                        </div>
+                        <h4 class="text-phi-sm font-medium mb-2">Navigation</h4>
+                        <ul class="text-sm text-slate-600 space-y-2">
+                            <li>Dashboard</li>
+                            <li>Analytics</li>
+                            <li>Settings</li>
+                        </ul>
+                    </div>
+                    <div class="flex-1 space-y-4">
+                        <div class="flex gap-4">
+                            <div class="w-phi bg-white p-6 rounded-lg shadow-sm">
+                                <h4 class="text-phi-sm font-medium mb-2">Primary Content</h4>
+                                <p class="text-slate-600">Nested golden ratio split within the main content area</p>
+                            </div>
+                            <div class="w-phi-sm bg-white p-6 rounded-lg shadow-sm">
+                                <h4 class="text-phi-sm font-medium mb-2">Meta</h4>
+                                <p class="text-slate-600">Secondary information</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-phi-xs bg-white p-6 rounded-lg shadow-sm text-center">
+                                <div class="text-phi text-amber-500 mb-1">23.6%</div>
+                                <div class="text-sm text-slate-600">Tertiary width</div>
+                            </div>
+                            <div class="flex-1 bg-white p-6 rounded-lg shadow-sm">
+                                <h4 class="text-phi-sm font-medium mb-2">Remaining Space</h4>
+                                <p class="text-slate-600">Flex-1 takes the rest</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-2 text-sm text-slate-500 font-mono">Nested flex layouts with w-phi-sm, w-phi, w-phi-xs
+                </div>
+            </div>
+
+            <!-- Card Layout -->
+            <div class="mb-8">
+                <h3 class="text-phi mb-3 text-slate-700">Card with Golden Proportions</h3>
+                <div class="flex flex-wrap gap-4">
+                    <div class="w-phi-sm bg-white rounded-lg shadow-sm overflow-hidden">
+                        <div class="aspect-phi bg-gradient-to-br from-amber-50 to-amber-100"></div>
+                        <div class="p-4">
+                            <h4 class="text-phi-sm font-medium mb-2">Card Title</h4>
+                            <p class="text-sm text-slate-600">Width is 38.2% of container</p>
+                        </div>
+                    </div>
+                    <div class="w-phi-xs bg-white rounded-lg shadow-sm overflow-hidden">
+                        <div class="aspect-phi bg-gradient-to-br from-amber-100 to-amber-200"></div>
+                        <div class="p-4">
+                            <h4 class="text-phi-sm font-medium mb-2">Small Card</h4>
+                            <p class="text-sm text-slate-600">Width is 23.6% of container</p>
+                        </div>
+                    </div>
+                    <div class="flex-1 bg-white rounded-lg shadow-sm overflow-hidden">
+                        <div class="aspect-phi bg-gradient-to-br from-amber-50 to-amber-100"></div>
+                        <div class="p-4">
+                            <h4 class="text-phi-sm font-medium mb-2">Flexible Card</h4>
+                            <p class="text-sm text-slate-600">Takes remaining space</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-2 text-sm text-slate-500 font-mono">flex flex-wrap + w-phi-sm + w-phi-xs + flex-1</div>
+            </div>
+
+            <!-- Feature Boxes -->
+            <div class="mb-8">
+                <h3 class="text-phi mb-3 text-slate-700">Feature Box Layout</h3>
+                <div class="flex gap-4 items-stretch">
+                    <div class="w-phi flex flex-col bg-white rounded-lg shadow-sm overflow-hidden">
+                        <div class="flex-1 p-6">
+                            <h4 class="text-phi font-medium mb-3">Main Feature</h4>
+                            <p class="text-slate-600">Primary content area using w-phi (61.8%)</p>
+                        </div>
+                        <div class="bg-amber-50 p-4 text-sm text-amber-800">
+                            Featured Content
+                        </div>
+                    </div>
+                    <div class="w-phi-sm flex flex-col justify-between bg-white rounded-lg shadow-sm overflow-hidden">
+                        <div class="p-6">
+                            <h4 class="text-phi-sm font-medium mb-3">Secondary</h4>
+                            <p class="text-slate-600">Using w-phi-sm (38.2%)</p>
+                        </div>
+                        <div class="bg-slate-50 p-4 text-sm text-slate-600">
+                            Additional Info
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-2 text-sm text-slate-500 font-mono">flex + w-phi + w-phi-sm with nested flex columns
+                </div>
+            </div>
+        </section>
+
+        <!-- Add this new section before the footer -->
+        <section class="mb-12">
+            <h2 class="text-phi-lg font-light mb-6">Golden Ratio Spacing</h2>
+            <p class="text-slate-600 mb-6">Using phi-based units for padding, margins, and gaps creates harmonious
+                spatial relationships</p>
+
+            <!-- Padding Examples -->
+            <div class="mb-8">
+                <h3 class="text-phi mb-3 text-slate-700">Padding Scale</h3>
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="bg-white rounded-lg shadow-sm">
+                        <div class="p-phi bg-amber-50 rounded-lg border-2 border-dashed border-amber-200">
+                            <div class="text-sm text-amber-800 font-mono">p-phi</div>
+                            <div class="text-xs text-amber-600">1.618rem (26px)</div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm">
+                        <div class="p-phi-sm bg-amber-50 rounded-lg border-2 border-dashed border-amber-200">
+                            <div class="text-sm text-amber-800 font-mono">p-phi-sm</div>
+                            <div class="text-xs text-amber-600">1rem (16px)</div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm">
+                        <div class="p-phi-xs bg-amber-50 rounded-lg border-2 border-dashed border-amber-200">
+                            <div class="text-sm text-amber-800 font-mono">p-phi-xs</div>
+                            <div class="text-xs text-amber-600">0.618rem (10px)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nested Spacing -->
+            <div class="mb-8">
+                <h3 class="text-phi mb-3 text-slate-700">Nested Spacing Harmony</h3>
+                <div class="bg-white p-phi rounded-lg shadow-sm">
+                    <h4 class="text-phi-sm font-medium mb-phi-xs text-slate-700">Content Hierarchy</h4>
+                    <div class="space-y-phi-sm">
+                        <!-- Content Section -->
+                        <div
+                            class="bg-gradient-to-br from-slate-50 to-slate-100 p-phi-sm rounded-lg border border-slate-200">
+                            <h5 class="text-phi-sm font-medium mb-phi-xs text-slate-600">Primary Content</h5>
+                            <div class="space-y-phi-xs">
+                                <div
+                                    class="bg-white p-phi-sm rounded-lg shadow-sm hover:shadow transition-shadow duration-phi">
+                                    <div class="flex items-center gap-phi-xs">
+                                        <div class="w-2 h-2 rounded-full bg-amber-400"></div>
+                                        <span class="text-slate-600">Important information</span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="bg-white p-phi-sm rounded-lg shadow-sm hover:shadow transition-shadow duration-phi">
+                                    <div class="flex items-center gap-phi-xs">
+                                        <div class="w-2 h-2 rounded-full bg-amber-400"></div>
+                                        <span class="text-slate-600">Key details</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Interactive Section -->
+                        <div
+                            class="bg-gradient-to-br from-amber-50 to-amber-100 p-phi-sm rounded-lg border border-amber-200">
+                            <h5 class="text-phi-sm font-medium mb-phi-xs text-amber-800">Interactive Elements</h5>
+                            <div class="space-y-phi-xs">
+                                <div
+                                    class="group bg-white p-phi-sm rounded-lg shadow-sm hover:shadow transition-all duration-phi">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center gap-phi-xs">
+                                            <div
+                                                class="w-2 h-2 rounded-full bg-amber-400 group-hover:scale-125 transition-transform duration-phi">
+                                            </div>
+                                            <span class="text-slate-600">Hover me</span>
+                                        </div>
+                                        <svg class="w-4 h-4 text-amber-400 group-hover:translate-x-1 transition-transform duration-phi"
+                                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div
+                                    class="group bg-white p-phi-sm rounded-lg shadow-sm hover:shadow transition-all duration-phi">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center gap-phi-xs">
+                                            <div
+                                                class="w-2 h-2 rounded-full bg-amber-400 group-hover:scale-125 transition-transform duration-phi">
+                                            </div>
+                                            <span class="text-slate-600">Interactive item</span>
+                                        </div>
+                                        <svg class="w-4 h-4 text-amber-400 group-hover:translate-x-1 transition-transform duration-phi"
+                                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 5l7 7-7 7"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-2 text-sm text-slate-500 font-mono space-y-1">
+                    <div>Spacing: p-phi, p-phi-sm, space-y-phi-sm, space-y-phi-xs</div>
+                    <div class="text-xs text-slate-400">Hover over items to see interactive states</div>
+                </div>
+            </div>
+
+            <!-- Card Grid with Golden Spacing -->
+            <div class="mb-8">
+                <h3 class="text-phi mb-3 text-slate-700">Card Grid with Golden Spacing</h3>
+                <div class="grid grid-cols-3 gap-phi-xs">
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <div class="aspect-phi bg-gradient-to-br from-amber-50 to-amber-100"></div>
+                        <div class="p-phi-sm space-y-phi-xs">
+                            <h4 class="text-phi-sm font-medium">Card Title</h4>
+                            <p class="text-sm text-slate-600">Using phi-based spacing for consistent rhythm</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <div class="aspect-phi bg-gradient-to-br from-amber-100 to-amber-200"></div>
+                        <div class="p-phi-sm space-y-phi-xs">
+                            <h4 class="text-phi-sm font-medium">Card Title</h4>
+                            <p class="text-sm text-slate-600">Margins and padding follow the golden ratio</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <div class="aspect-phi bg-gradient-to-br from-amber-50 to-amber-100"></div>
+                        <div class="p-phi-sm space-y-phi-xs">
+                            <h4 class="text-phi-sm font-medium">Card Title</h4>
+                            <p class="text-sm text-slate-600">Creating visual harmony through spacing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Example -->
+            <div class="mb-8">
+                <h3 class="text-phi mb-3 text-slate-700">Form Layout with Golden Spacing</h3>
+                <form class="bg-white p-phi rounded-lg shadow-sm space-y-phi-sm">
+                    <div class="space-y-phi-xs">
+                        <label class="block text-sm font-medium text-slate-700">Email</label>
+                        <input type="email" class="w-full p-phi-xs rounded border border-slate-200"
+                            placeholder="you@example.com">
+                    </div>
+                    <div class="space-y-phi-xs">
+                        <label class="block text-sm font-medium text-slate-700">Message</label>
+                        <textarea class="w-full p-phi-xs rounded border border-slate-200" rows="4"></textarea>
+                    </div>
+                    <div class="pt-phi-xs">
+                        <button class="bg-amber-500 text-white px-phi py-phi-xs rounded">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+                <div class="mt-2 text-sm text-slate-500 font-mono">
+                    Form using p-phi, space-y-phi-sm, space-y-phi-xs
+                </div>
+            </div>
+
+            <!-- Content Rhythm -->
+            <div class="mb-8">
+                <h3 class="text-phi mb-3 text-slate-700">Content Rhythm</h3>
+                <div class="bg-white p-phi rounded-lg shadow-sm">
+                    <article class="prose space-y-phi-sm">
+                        <h4 class="text-phi font-medium">Article Title</h4>
+                        <p class="text-slate-600">Main paragraph with phi-based line height. The golden ratio creates
+                            natural rhythm in typography and spacing.</p>
+                        <blockquote class="border-l-4 border-amber-200 pl-phi-xs italic text-slate-600">
+                            "The golden ratio has been used in art and architecture for thousands of years."
+                        </blockquote>
+                        <p class="text-slate-600">Another paragraph demonstrating the harmonious spacing between
+                            elements.</p>
+                        <div class="grid grid-cols-2 gap-phi-xs">
+                            <div class="bg-slate-50 p-phi-xs rounded">Supporting point 1</div>
+                            <div class="bg-slate-50 p-phi-xs rounded">Supporting point 2</div>
+                        </div>
+                    </article>
+                </div>
+                <div class="mt-2 text-sm text-slate-500 font-mono">
+                    Article using space-y-phi-sm, p-phi-xs, gap-phi-xs
+                </div>
+            </div>
+        </section>
+
+        <!-- Add this section after the Typography Scale section -->
+        <section class="mb-12">
+            <h2 class="text-phi-lg font-light mb-6">Line Height Harmony</h2>
+            <div class="grid grid-cols-phi-fixed gap-6">
+                <!-- Examples -->
+                <div class="space-y-8">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-phi-sm font-medium mb-2 text-amber-600">Basic Line Heights</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <div class="text-sm text-slate-500 font-mono mb-2">leading-phi (1.618034)</div>
+                                <p class="leading-phi text-slate-700 bg-slate-50 p-4 rounded">
+                                    The golden ratio creates perfect rhythm in typography. This paragraph uses the
+                                    classic φ value for line height, creating natural spacing between lines.
+                                </p>
+                            </div>
+                            <div>
+                                <div class="text-sm text-slate-500 font-mono mb-2">leading-phi-0.5 (√φ ≈ 1.272019)</div>
+                                <p class="leading-phi-0.5 text-slate-700 bg-slate-50 p-4 rounded">
+                                    For tighter spacing, we can use the square root of φ. This creates a more compact
+                                    but still harmonious spacing, perfect for headings or short paragraphs.
+                                </p>
+                            </div>
+                            <div>
+                                <div class="text-sm text-slate-500 font-mono mb-2">leading-phi-2 (φ² ≈ 2.618034)</div>
+                                <p class="leading-phi-2 text-slate-700 bg-slate-50 p-4 rounded">
+                                    For more spacious text, we can use φ². This creates airy, open spacing that's
+                                    perfect for important quotes or featured text.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-phi-sm font-medium mb-2 text-amber-600">Refined Variations</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <div class="text-sm text-slate-500 font-mono mb-2">leading-phi-tight (1 + 1/φ ≈
+                                    1.381966)</div>
+                                <p class="leading-phi-tight text-slate-700 bg-slate-50 p-4 rounded">
+                                    A slightly tighter spacing that maintains the golden ratio's harmony while providing
+                                    more density. Perfect for body text that needs to be compact but readable.
+                                </p>
+                            </div>
+                            <div>
+                                <div class="text-sm text-slate-500 font-mono mb-2">leading-phi-relaxed (φ + 1/φ ≈
+                                    2.236068)</div>
+                                <p class="leading-phi-relaxed text-slate-700 bg-slate-50 p-4 rounded">
+                                    A more relaxed spacing that combines φ with its reciprocal. This creates an open,
+                                    airy feel while maintaining mathematical harmony.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mathematical Explanation -->
+                <div class="bg-slate-800 text-slate-200 p-6 rounded-lg shadow-sm space-y-phi-xs">
+                    <h3 class="text-phi font-light mb-4">Line Height Mathematics</h3>
+                    <div class="space-y-4 font-mono text-sm">
+                        <div>
+                            <p class="text-amber-400">Basic φ Values:</p>
+                            <ul class="mt-2 space-y-1 text-slate-300">
+                                <li>φ = 1.618034</li>
+                                <li>φ² = 2.618034</li>
+                                <li>√φ = 1.272019</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="text-amber-400">Derived Values:</p>
+                            <ul class="mt-2 space-y-1 text-slate-300">
+                                <li>1 + 1/φ = 1.381966</li>
+                                <li>φ + 1/φ = 2.236068</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-400 mt-4">
+                        Each line height value is derived from the golden ratio, creating a harmonious scale of spacing
+                        options.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deep Nested Golden Spiral -->
+        <div class="mb-8">
+            <h3 class="text-phi mb-3 text-slate-700">Deep Nested Golden Harmony</h3>
+            <div class="bg-white p-phi rounded-lg shadow-sm">
+                <h4 class="text-phi-sm font-medium mb-phi-xs text-slate-700">Nested Golden Spiral</h4>
+
+                <!-- Level 1: Main Container -->
+                <div class="grid grid-cols-phi-fixed gap-phi-sm">
+                    <!-- Left Content (61.8%) -->
+                    <div class="space-y-phi-xs">
+                        <!-- Level 2: Primary Content -->
+                        <div class="grid grid-cols-phi-fixed gap-phi-xs">
+                            <!-- Level 2 Main -->
+                            <div
+                                class="bg-gradient-to-br from-amber-50 to-amber-100 p-phi-sm rounded-lg border border-amber-200">
+                                <h5 class="text-phi-sm font-medium mb-phi-xs text-amber-800">Primary Section</h5>
+                                <!-- Level 3: Content Grid -->
+                                <div class="grid grid-cols-phi-fixed gap-phi-xs">
+                                    <div class="space-y-phi-xs">
+                                        <!-- Level 4: Nested Items -->
+                                        <div
+                                            class="bg-white p-phi-xs rounded-lg shadow-sm group hover:shadow-md transition-all duration-phi">
+                                            <div class="flex items-center justify-between">
+                                                <div class="flex items-center gap-phi-xs">
+                                                    <div
+                                                        class="w-2 h-2 rounded-full bg-amber-400 group-hover:scale-125 transition-transform duration-phi">
+                                                    </div>
+                                                    <span class="text-slate-600">Golden Ratio</span>
+                                                </div>
+                                                <span class="font-mono text-amber-500 text-sm">1.618034</span>
+                                            </div>
+                                        </div>
+                                        <!-- Level 5: Final Nesting -->
+                                        <div class="grid grid-cols-phi-fixed gap-phi-xs">
+                                            <div
+                                                class="bg-white p-phi-xs rounded-lg shadow-sm group hover:shadow-md transition-all duration-phi">
+                                                <div class="flex flex-col gap-1">
+                                                    <div class="text-amber-500 font-mono text-sm">61.8%</div>
+                                                    <div class="text-xs text-slate-500">Major</div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="bg-white p-phi-xs rounded-lg shadow-sm group hover:shadow-md transition-all duration-phi">
+                                                <div class="flex flex-col gap-1">
+                                                    <div class="text-amber-500 font-mono text-sm">38.2%</div>
+                                                    <div class="text-xs text-slate-500">Minor</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white p-phi-xs rounded-lg shadow-sm">
+                                        <div class="aspect-square flex items-center justify-center relative">
+                                            <div class="absolute inset-0">
+                                                <div
+                                                    class="absolute right-0 top-0 w-phi h-phi border-l border-b border-amber-300 rounded-bl-[100%]">
+                                                </div>
+                                            </div>
+                                            <div class="text-amber-500 font-mono text-sm">φ</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Level 2 Secondary -->
+                            <div
+                                class="bg-gradient-to-br from-slate-50 to-slate-100 p-phi-sm rounded-lg border border-slate-200">
+                                <h5 class="text-phi-sm font-medium mb-phi-xs text-slate-700">Secondary</h5>
+                                <div class="space-y-phi-xs">
+                                    <div class="bg-white p-phi-xs rounded-lg shadow-sm">
+                                        <div class="flex items-center justify-between">
+                                            <span class="text-slate-600">Reciprocal</span>
+                                            <span class="font-mono text-slate-500">0.618034</span>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white p-phi-xs rounded-lg shadow-sm">
+                                        <div class="flex items-center justify-between">
+                                            <span class="text-slate-600">Square</span>
+                                            <span class="font-mono text-slate-500">2.618034</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Explanation -->
+                    <div class="mt-phi-sm space-y-2">
+                        <div class="font-mono text-slate-500 mb-2">Nesting Levels & Values:</div>
+                        <div class="grid grid-cols-2 gap-4 text-sm">
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-2 h-2 rounded-full bg-amber-300/40"></div>
+                                    <span class="text-slate-600">Level 1: φ¹ = 1.618034</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <div class="w-2 h-2 rounded-full bg-amber-400/60"></div>
+                                    <span class="text-slate-600">Level 2: φ² = 2.618034</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <div class="w-2 h-2 rounded-full bg-amber-500/80"></div>
+                                    <span class="text-slate-600">Level 3: φ³ = 4.236068</span>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-2 h-2 rounded-full bg-amber-600"></div>
+                                    <span class="text-slate-600">Level 4: φ⁴ = 6.854102</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <div class="w-2 h-2 rounded-full bg-amber-700"></div>
+                                    <span class="text-slate-600">Level 5: φ⁵ = 11.09017</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-xs text-slate-400">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <span>Each level multiplies by φ (1.618034)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Multi-Column Golden Layouts -->
+        <section class="mb-12">
+            <h2 class="text-phi-lg font-light mb-6">Multi-Column Golden Layouts</h2>
+
+            <!-- Pure Golden Ratio -->
+            <div class="mb-8">
+                <h3 class="text-phi mb-3 text-slate-700">Pure Golden Ratio Progression</h3>
+                <div class="grid grid-cols-phi-pure gap-4">
+                    <div class="bg-gradient-to-br from-amber-50 to-amber-100 p-4 rounded-lg">
+                        <div class="font-mono text-amber-800">61.8%</div>
+                        <div class="text-sm text-amber-700">1/φ</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-100 to-amber-200 p-4 rounded-lg">
+                        <div class="font-mono text-amber-800">38.2%</div>
+                        <div class="text-sm text-amber-700">1/φ²</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-200 to-amber-300 p-4 rounded-lg">
+                        <div class="font-mono text-amber-800">23.6%</div>
+                        <div class="text-sm text-amber-700">1/φ³</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-amber-300 to-amber-400 p-4 rounded-lg">
+                        <div class="font-mono text-amber-800">14.6%</div>
+                        <div class="text-sm text-amber-700">1/φ⁴</div>
+                    </div>
+                </div>
+                <div class="mt-2 text-sm text-slate-500">Each column is divided by φ, creating a natural progression
+                </div>
+            </div>
+
+            <!-- Hybrid Approach -->
+            <div class="mb-8">
+                <h3 class="text-phi mb-3 text-slate-700">Hybrid Layout (5 Columns)</h3>
+                <div class="grid grid-cols-phi-5 gap-4">
+                    <!-- Major Column -->
+                    <div class="bg-gradient-to-br from-amber-50 to-amber-100 p-4 rounded-lg">
+                        <div class="font-mono text-amber-800">61.8%</div>
+                        <div class="text-sm text-amber-700">Major</div>
+                    </div>
+                    <!-- Equal Columns -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                        <div class="font-mono text-slate-600">9.5%</div>
+                        <div class="text-sm text-slate-500">Equal</div>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                        <div class="font-mono text-slate-600">9.5%</div>
+                        <div class="text-sm text-slate-500">Equal</div>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                        <div class="font-mono text-slate-600">9.5%</div>
+                        <div class="text-sm text-slate-500">Equal</div>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                        <div class="font-mono text-slate-600">9.5%</div>
+                        <div class="text-sm text-slate-500">Equal</div>
+                    </div>
+                </div>
+                <div class="mt-2 text-sm text-slate-500">Major column (61.8%) + equal distribution of remaining space
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Add this new section before the footer -->
+    <section class="mb-12 p-phi">
+        <h2 class="text-phi-lg font-light mb-6">Golden Ratio Spacing</h2>
+        <p class="text-slate-600 mb-6">Using phi-based units for padding, margins, and gaps creates harmonious
+            spatial relationships</p>
+
+        <!-- Padding Examples -->
+        <div class="mb-8">
+            <h3 class="text-phi mb-3 text-slate-700">Padding Scale</h3>
+            <div class="grid grid-cols-3 gap-4">
+                <div class="bg-white rounded-lg shadow-sm">
+                    <div class="p-phi bg-amber-50 rounded-lg border-2 border-dashed border-amber-200">
+                        <div class="text-sm text-amber-800 font-mono">p-phi</div>
+                        <div class="text-xs text-amber-600">1.618rem (26px)</div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm">
+                    <div class="p-phi-sm bg-amber-50 rounded-lg border-2 border-dashed border-amber-200">
+                        <div class="text-sm text-amber-800 font-mono">p-phi-sm</div>
+                        <div class="text-xs text-amber-600">1rem (16px)</div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm">
+                    <div class="p-phi-xs bg-amber-50 rounded-lg border-2 border-dashed border-amber-200">
+                        <div class="text-sm text-amber-800 font-mono">p-phi-xs</div>
+                        <div class="text-xs text-amber-600">0.618rem (10px)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nested Spacing -->
+        <div class="mb-8">
+            <h3 class="text-phi mb-3 text-slate-700">Nested Spacing Harmony</h3>
+            <div class="bg-white p-phi rounded-lg shadow-sm">
+                <h4 class="text-phi-sm font-medium mb-phi-xs text-slate-700">Content Hierarchy</h4>
+                <div class="space-y-phi-sm">
+                    <!-- Content Section -->
+                    <div
+                        class="bg-gradient-to-br from-slate-50 to-slate-100 p-phi-sm rounded-lg border border-slate-200">
+                        <h5 class="text-phi-sm font-medium mb-phi-xs text-slate-600">Primary Content</h5>
+                        <div class="space-y-phi-xs">
+                            <div
+                                class="bg-white p-phi-sm rounded-lg shadow-sm hover:shadow transition-shadow duration-phi">
+                                <div class="flex items-center gap-phi-xs">
+                                    <div class="w-2 h-2 rounded-full bg-amber-400"></div>
+                                    <span class="text-slate-600">Important information</span>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-white p-phi-sm rounded-lg shadow-sm hover:shadow transition-shadow duration-phi">
+                                <div class="flex items-center gap-phi-xs">
+                                    <div class="w-2 h-2 rounded-full bg-amber-400"></div>
+                                    <span class="text-slate-600">Key details</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Section -->
+                    <div
+                        class="bg-gradient-to-br from-amber-50 to-amber-100 p-phi-sm rounded-lg border border-amber-200">
+                        <h5 class="text-phi-sm font-medium mb-phi-xs text-amber-800">Interactive Elements</h5>
+                        <div class="space-y-phi-xs">
+                            <div
+                                class="group bg-white p-phi-sm rounded-lg shadow-sm hover:shadow transition-all duration-phi">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-phi-xs">
+                                        <div
+                                            class="w-2 h-2 rounded-full bg-amber-400 group-hover:scale-125 transition-transform duration-phi">
+                                        </div>
+                                        <span class="text-slate-600">Hover me</span>
+                                    </div>
+                                    <svg class="w-4 h-4 text-amber-400 group-hover:translate-x-1 transition-transform duration-phi"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div
+                                class="group bg-white p-phi-sm rounded-lg shadow-sm hover:shadow transition-all duration-phi">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-phi-xs">
+                                        <div
+                                            class="w-2 h-2 rounded-full bg-amber-400 group-hover:scale-125 transition-transform duration-phi">
+                                        </div>
+                                        <span class="text-slate-600">Interactive item</span>
+                                    </div>
+                                    <svg class="w-4 h-4 text-amber-400 group-hover:translate-x-1 transition-transform duration-phi"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-2 text-sm text-slate-500 font-mono space-y-1">
+                <div>Spacing: p-phi, p-phi-sm, space-y-phi-sm, space-y-phi-xs</div>
+                <div class="text-xs text-slate-400">Hover over items to see interactive states</div>
+            </div>
+        </div>
+
+        <!-- Card Grid with Golden Spacing -->
+        <div class="mb-8">
+            <h3 class="text-phi mb-3 text-slate-700">Card Grid with Golden Spacing</h3>
+            <div class="grid grid-cols-3 gap-phi-xs">
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="aspect-phi bg-gradient-to-br from-amber-50 to-amber-100"></div>
+                    <div class="p-phi-sm space-y-phi-xs">
+                        <h4 class="text-phi-sm font-medium">Card Title</h4>
+                        <p class="text-sm text-slate-600">Using phi-based spacing for consistent rhythm</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="aspect-phi bg-gradient-to-br from-amber-100 to-amber-200"></div>
+                    <div class="p-phi-sm space-y-phi-xs">
+                        <h4 class="text-phi-sm font-medium">Card Title</h4>
+                        <p class="text-sm text-slate-600">Margins and padding follow the golden ratio</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="aspect-phi bg-gradient-to-br from-amber-50 to-amber-100"></div>
+                    <div class="p-phi-sm space-y-phi-xs">
+                        <h4 class="text-phi-sm font-medium">Card Title</h4>
+                        <p class="text-sm text-slate-600">Creating visual harmony through spacing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Example -->
+        <div class="mb-8">
+            <h3 class="text-phi mb-3 text-slate-700">Form Layout with Golden Spacing</h3>
+            <form class="bg-white p-phi rounded-lg shadow-sm space-y-phi-sm">
+                <div class="space-y-phi-xs">
+                    <label class="block text-sm font-medium text-slate-700">Email</label>
+                    <input type="email" class="w-full p-phi-xs rounded border border-slate-200"
+                        placeholder="you@example.com">
+                </div>
+                <div class="space-y-phi-xs">
+                    <label class="block text-sm font-medium text-slate-700">Message</label>
+                    <textarea class="w-full p-phi-xs rounded border border-slate-200" rows="4"></textarea>
+                </div>
+                <div class="pt-phi-xs">
+                    <button class="bg-amber-500 text-white px-phi py-phi-xs rounded">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+            <div class="mt-2 text-sm text-slate-500 font-mono">
+                Form using p-phi, space-y-phi-sm, space-y-phi-xs
+            </div>
+        </div>
+
+        <!-- Content Rhythm -->
+        <div class="mb-8">
+            <h3 class="text-phi mb-3 text-slate-700">Content Rhythm</h3>
+            <div class="bg-white p-phi rounded-lg shadow-sm">
+                <article class="prose space-y-phi-sm">
+                    <h4 class="text-phi font-medium">Article Title</h4>
+                    <p class="text-slate-600">Main paragraph with phi-based line height. The golden ratio creates
+                        natural rhythm in typography and spacing.</p>
+                    <blockquote class="border-l-4 border-amber-200 pl-phi-xs italic text-slate-600">
+                        "The golden ratio has been used in art and architecture for thousands of years."
+                    </blockquote>
+                    <p class="text-slate-600">Another paragraph demonstrating the harmonious spacing between
+                        elements.</p>
+                    <div class="grid grid-cols-2 gap-phi-xs">
+                        <div class="bg-slate-50 p-phi-xs rounded">Supporting point 1</div>
+                        <div class="bg-slate-50 p-phi-xs rounded">Supporting point 2</div>
+                    </div>
+                </article>
+            </div>
+            <div class="mt-2 text-sm text-slate-500 font-mono">
+                Article using space-y-phi-sm, p-phi-xs, gap-phi-xs
+            </div>
+        </div>
+    </section>
+
+    <!-- Add this section after the Typography Scale section -->
+    <section class="mb-12 p-phi">
+        <h2 class="text-phi-lg font-light mb-6">Line Height Harmony</h2>
+        <div class="grid grid-cols-phi-fixed gap-6">
+            <!-- Examples -->
+            <div class="space-y-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-phi-sm font-medium mb-2 text-amber-600">Basic Line Heights</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="text-sm text-slate-500 font-mono mb-2">leading-phi (1.618034)</div>
+                            <p class="leading-phi text-slate-700 bg-slate-50 p-4 rounded">
+                                The golden ratio creates perfect rhythm in typography. This paragraph uses the
+                                classic φ value for line height, creating natural spacing between lines.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="text-sm text-slate-500 font-mono mb-2">leading-phi-0.5 (√φ ≈ 1.272019)</div>
+                            <p class="leading-phi-0.5 text-slate-700 bg-slate-50 p-4 rounded">
+                                For tighter spacing, we can use the square root of φ. This creates a more compact
+                                but still harmonious spacing, perfect for headings or short paragraphs.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="text-sm text-slate-500 font-mono mb-2">leading-phi-2 (φ² ≈ 2.618034)</div>
+                            <p class="leading-phi-2 text-slate-700 bg-slate-50 p-4 rounded">
+                                For more spacious text, we can use φ². This creates airy, open spacing that's
+                                perfect for important quotes or featured text.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-phi-sm font-medium mb-2 text-amber-600">Refined Variations</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="text-sm text-slate-500 font-mono mb-2">leading-phi-tight (1 + 1/φ ≈
+                                1.381966)</div>
+                            <p class="leading-phi-tight text-slate-700 bg-slate-50 p-4 rounded">
+                                A slightly tighter spacing that maintains the golden ratio's harmony while providing
+                                more density. Perfect for body text that needs to be compact but readable.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="text-sm text-slate-500 font-mono mb-2">leading-phi-relaxed (φ + 1/φ ≈
+                                2.236068)</div>
+                            <p class="leading-phi-relaxed text-slate-700 bg-slate-50 p-4 rounded">
+                                A more relaxed spacing that combines φ with its reciprocal. This creates an open,
+                                airy feel while maintaining mathematical harmony.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mathematical Explanation -->
+            <div class="bg-slate-800 text-slate-200 p-6 rounded-lg shadow-sm space-y-phi-xs">
+                <h3 class="text-phi font-light mb-4">Line Height Mathematics</h3>
+                <div class="space-y-4 font-mono text-sm">
+                    <div>
+                        <p class="text-amber-400">Basic φ Values:</p>
+                        <ul class="mt-2 space-y-1 text-slate-300">
+                            <li>φ = 1.618034</li>
+                            <li>φ² = 2.618034</li>
+                            <li>√φ = 1.272019</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="text-amber-400">Derived Values:</p>
+                        <ul class="mt-2 space-y-1 text-slate-300">
+                            <li>1 + 1/φ = 1.381966</li>
+                            <li>φ + 1/φ = 2.236068</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="text-sm text-slate-400 mt-4">
+                    Each line height value is derived from the golden ratio, creating a harmonious scale of spacing
+                    options.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deep Nested Golden Spiral -->
+    <div class="mb-8 p-phi-sm">
+        <h3 class="text-phi mb-3 text-slate-700">Deep Nested Golden Harmony</h3>
+        <div class="bg-white p-phi rounded-lg shadow-sm">
+            <h4 class="text-phi-sm font-medium mb-phi-xs text-slate-700">Nested Golden Spiral</h4>
+
+            <!-- Level 1: Main Container -->
+            <div class="grid grid-cols-phi-fixed gap-phi-sm">
+                <!-- Left Content (61.8%) -->
+                <div class="space-y-phi-xs">
+                    <!-- Level 2: Primary Content -->
+                    <div class="grid grid-cols-phi-fixed gap-phi-xs">
+                        <!-- Level 2 Main -->
+                        <div
+                            class="bg-gradient-to-br from-amber-50 to-amber-100 p-phi-sm rounded-lg border border-amber-200">
+                            <h5 class="text-phi-sm font-medium mb-phi-xs text-amber-800">Primary Section</h5>
+                            <!-- Level 3: Content Grid -->
+                            <div class="grid grid-cols-phi-fixed gap-phi-xs">
+                                <div class="space-y-phi-xs">
+                                    <!-- Level 4: Nested Items -->
+                                    <div
+                                        class="bg-white p-phi-xs rounded-lg shadow-sm group hover:shadow-md transition-all duration-phi">
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center gap-phi-xs">
+                                                <div
+                                                    class="w-2 h-2 rounded-full bg-amber-400 group-hover:scale-125 transition-transform duration-phi">
+                                                </div>
+                                                <span class="text-slate-600">Golden Ratio</span>
+                                            </div>
+                                            <span class="font-mono text-amber-500 text-sm">1.618034</span>
+                                        </div>
+                                    </div>
+                                    <!-- Level 5: Final Nesting -->
+                                    <div class="grid grid-cols-phi-fixed gap-phi-xs">
+                                        <div
+                                            class="bg-white p-phi-xs rounded-lg shadow-sm group hover:shadow-md transition-all duration-phi">
+                                            <div class="flex flex-col gap-1">
+                                                <div class="text-amber-500 font-mono text-sm">61.8%</div>
+                                                <div class="text-xs text-slate-500">Major</div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="bg-white p-phi-xs rounded-lg shadow-sm group hover:shadow-md transition-all duration-phi">
+                                            <div class="flex flex-col gap-1">
+                                                <div class="text-amber-500 font-mono text-sm">38.2%</div>
+                                                <div class="text-xs text-slate-500">Minor</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-white p-phi-xs rounded-lg shadow-sm">
+                                    <div class="aspect-square flex items-center justify-center relative">
+                                        <div class="absolute inset-0">
+                                            <div
+                                                class="absolute right-0 top-0 w-phi h-phi border-l border-b border-amber-300 rounded-bl-[100%]">
+                                            </div>
+                                        </div>
+                                        <div class="text-amber-500 font-mono text-sm">φ</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Level 2 Secondary -->
+                        <div
+                            class="bg-gradient-to-br from-slate-50 to-slate-100 p-phi-sm rounded-lg border border-slate-200">
+                            <h5 class="text-phi-sm font-medium mb-phi-xs text-slate-700">Secondary</h5>
+                            <div class="space-y-phi-xs">
+                                <div class="bg-white p-phi-xs rounded-lg shadow-sm">
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-slate-600">Reciprocal</span>
+                                        <span class="font-mono text-slate-500">0.618034</span>
+                                    </div>
+                                </div>
+                                <div class="bg-white p-phi-xs rounded-lg shadow-sm">
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-slate-600">Square</span>
+                                        <span class="font-mono text-slate-500">2.618034</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Explanation -->
+                <div class="mt-phi-sm space-y-2">
+                    <div class="font-mono text-slate-500 mb-2">Nesting Levels & Values:</div>
+                    <div class="grid grid-cols-2 gap-4 text-sm">
+                        <div class="space-y-2">
+                            <div class="flex items-center gap-2">
+                                <div class="w-2 h-2 rounded-full bg-amber-300/40"></div>
+                                <span class="text-slate-600">Level 1: φ¹ = 1.618034</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <div class="w-2 h-2 rounded-full bg-amber-400/60"></div>
+                                <span class="text-slate-600">Level 2: φ² = 2.618034</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <div class="w-2 h-2 rounded-full bg-amber-500/80"></div>
+                                <span class="text-slate-600">Level 3: φ³ = 4.236068</span>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex items-center gap-2">
+                                <div class="w-2 h-2 rounded-full bg-amber-600"></div>
+                                <span class="text-slate-600">Level 4: φ⁴ = 6.854102</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <div class="w-2 h-2 rounded-full bg-amber-700"></div>
+                                <span class="text-slate-600">Level 5: φ⁵ = 11.09017</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-xs text-slate-400">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span>Each level multiplies by φ (1.618034)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Multi-Column Golden Layouts -->
+    <section class="mb-12 p-phi-xs">
+        <h2 class="text-phi-lg font-light mb-6">Multi-Column Golden Layouts</h2>
+        <p class="text-slate-600 mb-6">Exploring how the golden ratio scales across multiple columns while
+            maintaining harmony.</p>
+
+        <!-- Four Columns - Pure Golden Progression -->
+        <div class="mb-8">
+            <h3 class="text-phi mb-3 text-slate-700">Four-Column Pure Golden Ratio</h3>
+            <div class="grid grid-cols-phi-4 gap-4">
+                <div class="bg-gradient-to-br from-amber-50 to-amber-100 p-4 rounded-lg border border-amber-200">
+                    <div class="font-mono text-amber-800 mb-2">23.6%</div>
+                    <div class="text-sm text-amber-700">1/φ³</div>
+                </div>
+                <div class="bg-gradient-to-br from-amber-100 to-amber-200 p-4 rounded-lg border border-amber-200">
+                    <div class="font-mono text-amber-800 mb-2">14.6%</div>
+                    <div class="text-sm text-amber-700">1/φ⁴</div>
+                </div>
+                <div class="bg-gradient-to-br from-amber-200 to-amber-300 p-4 rounded-lg border border-amber-200">
+                    <div class="font-mono text-amber-800 mb-2">9.0%</div>
+                    <div class="text-sm text-amber-700">1/φ⁵</div>
+                </div>
+                <div class="bg-gradient-to-br from-amber-300 to-amber-400 p-4 rounded-lg border border-amber-200">
+                    <div class="font-mono text-amber-800 mb-2">5.6%</div>
+                    <div class="text-sm text-amber-700">1/φ⁶</div>
+                </div>
+            </div>
+            <div class="mt-2 text-sm text-slate-500 font-mono">grid-cols-phi-4 (Pure golden ratio progression)</div>
+        </div>
+
+        <!-- Five Columns - Major + Equal -->
+        <div class="mb-8">
+            <h3 class="text-phi mb-3 text-slate-700">Five-Column Hybrid</h3>
+            <div class="grid grid-cols-phi-5 gap-4">
+                <div class="bg-gradient-to-br from-amber-50 to-amber-100 p-4 rounded-lg border border-amber-200">
+                    <div class="font-mono text-amber-800 mb-2">61.8%</div>
+                    <div class="text-sm text-amber-700">Major</div>
+                </div>
+                <!-- Equal distribution of remaining space -->
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <div class="font-mono text-slate-600 mb-2">9.5%</div>
+                    <div class="text-xs text-slate-500">Equal</div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <div class="font-mono text-slate-600 mb-2">9.5%</div>
+                    <div class="text-xs text-slate-500">Equal</div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <div class="font-mono text-slate-600 mb-2">9.5%</div>
+                    <div class="text-xs text-slate-500">Equal</div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <div class="font-mono text-slate-600 mb-2">9.5%</div>
+                    <div class="text-xs text-slate-500">Equal</div>
+                </div>
+            </div>
+            <div class="mt-2 text-sm text-slate-500 font-mono">grid-cols-phi-5 (Major segment + equal distribution)
+            </div>
+        </div>
+
+        <!-- Six Columns with Content -->
+        <div class="mb-8">
+            <h3 class="text-phi mb-3 text-slate-700">Six-Column Application</h3>
+            <div class="grid grid-cols-phi-6 gap-4">
+                <!-- Main Content -->
+                <div
+                    class="bg-gradient-to-br from-amber-50 to-amber-100 p-6 rounded-lg border border-amber-200 space-y-4">
+                    <h4 class="text-phi-sm font-medium text-amber-800">Featured Content</h4>
+                    <p class="text-sm text-amber-700">Major segment (61.8%) with primary content</p>
+                    <div class="text-xs text-amber-600">Golden ratio applied to layout</div>
+                </div>
+                <!-- Secondary Items -->
+                <div class="space-y-4">
+                    <div class="aspect-phi bg-white rounded-lg shadow-sm"></div>
+                    <div class="text-xs text-center text-slate-500">7.6%</div>
+                </div>
+                <div class="space-y-4">
+                    <div class="aspect-phi bg-white rounded-lg shadow-sm"></div>
+                    <div class="text-xs text-center text-slate-500">7.6%</div>
+                </div>
+                <div class="space-y-4">
+                    <div class="aspect-phi bg-white rounded-lg shadow-sm"></div>
+                    <div class="text-xs text-center text-slate-500">7.6%</div>
+                </div>
+                <div class="space-y-4">
+                    <div class="aspect-phi bg-white rounded-lg shadow-sm"></div>
+                    <div class="text-xs text-center text-slate-500">7.6%</div>
+                </div>
+                <div class="space-y-4">
+                    <div class="aspect-phi bg-white rounded-lg shadow-sm"></div>
+                    <div class="text-xs text-center text-slate-500">7.6%</div>
+                </div>
+            </div>
+            <div class="mt-2 text-sm text-slate-500 font-mono">grid-cols-phi-6 (Major segment + 5 equal columns)
+            </div>
+        </div>
+
+        <!-- Seven Columns -->
+        <div class="mb-8">
+            <h3 class="text-phi mb-3 text-slate-700">Seven-Column Gallery</h3>
+            <div class="grid grid-cols-phi-7 gap-4">
+                <!-- Main Content -->
+                <div class="bg-gradient-to-br from-amber-50 to-amber-100 p-6 rounded-lg border border-amber-200">
+                    <div class="aspect-phi-reverse mb-4 bg-white/50 rounded-lg"></div>
+                    <h4 class="text-phi-sm font-medium text-amber-800">Featured</h4>
+                    <p class="text-sm text-amber-700 mt-2">61.8%</p>
+                </div>
+                <!-- Gallery Items -->
+                <div class="space-y-2">
+                    <div class="aspect-square bg-white rounded-lg shadow-sm"></div>
+                    <div class="text-xs text-center text-slate-500">6.4%</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="aspect-square bg-white rounded-lg shadow-sm"></div>
+                    <div class="text-xs text-center text-slate-500">6.4%</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="aspect-square bg-white rounded-lg shadow-sm"></div>
+                    <div class="text-xs text-center text-slate-500">6.4%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
