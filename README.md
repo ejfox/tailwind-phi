@@ -2,6 +2,8 @@
 
 Ever notice how some designs just feel... right? There's often mathematics behind that feeling - specifically the golden ratio (φ ≈ 1.618034). This plugin gives you a set of magic numbers, baked into Tailwind utilities, that you can mix into your existing designs to make them feel more harmonious.
 
+![image](https://github.com/user-attachments/assets/c51671f4-ea68-42f9-8a81-a34258094c23)
+
 ```bash
 npm install tailwind-phi
 ```
